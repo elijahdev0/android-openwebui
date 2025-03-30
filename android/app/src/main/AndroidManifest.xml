@@ -38,4 +38,10 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Add android.permission.MODIFY_AUDIO_SETTINGS if the app needs to change audio settings like volume -->
+    <!-- Add android.permission.WRITE_EXTERNAL_STORAGE if needing to write files (less common now, use scoped storage) -->
 </manifest>
