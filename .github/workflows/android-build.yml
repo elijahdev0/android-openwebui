@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin' # Popular OpenJDK distribution
-          java-version: '17'
+          java-version: '21'
 
       # Note: setup-android action automatically handles SDK setup based on project needs
       - name: Set up Android SDK
