@@ -1,7 +1,9 @@
 name: Build Android Debug APK
 
 on:
-  workflow_dispatch: # Allows manual triggering from the GitHub Actions tab
+  push:
+    branches: [ main ] # Trigger on push to the main branch
+  workflow_dispatch: # Keep manual trigger as well (optional)
 
 jobs:
   build:
@@ -19,6 +21,9 @@ jobs:
 
       - name: Install Node dependencies
         run: npm ci # Install dependencies including @capacitor/cli
+
+      - name: Create Android assets directory
+        run: mkdir -p android/app/src/main/assets
 
       - name: Sync Capacitor Android project
         # Sync is still needed to update plugins and generate config files, even when loading remote URL
