@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">open-webui</string>
+    <string name="title_activity_main">open-webui</string>
+    <string name="package_name">com.personal.openwebui</string>
+    <string name="custom_url_scheme">com.personal.openwebui</string>
+</resources>
