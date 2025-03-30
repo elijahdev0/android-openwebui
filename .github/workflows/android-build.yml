@@ -17,6 +17,9 @@ jobs:
           node-version: '20' # Based on package.json engines field
           cache: 'npm' # Cache npm dependencies
 
+      - name: Install Node dependencies
+        run: npm ci # Install dependencies including @capacitor/cli
+
       - name: Sync Capacitor Android project
         # Sync is still needed to update plugins and generate config files, even when loading remote URL
         run: npx cap sync android
