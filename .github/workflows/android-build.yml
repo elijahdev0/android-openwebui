@@ -17,14 +17,7 @@ jobs:
           node-version: '20' # Based on package.json engines field
           cache: 'npm' # Cache npm dependencies
 
-      - name: Install frontend dependencies
-        run: npm ci # Use ci for cleaner installs in CI
-
-      - name: Build frontend
-        run: npm run build
-
-      - name: Sync Capacitor assets
-        run: npx cap sync android
+      # Frontend build and sync steps are removed as we load the remote URL
 
       - name: Set up Java (JDK)
         uses: actions/setup-java@v4
